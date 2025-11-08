@@ -21,7 +21,7 @@ This site is configured for GitHub Pages deployment.
    - Go to your repository settings on GitHub
    - Navigate to **Pages** section (under Code and automation)
    - Under **Source**, select **Deploy from a branch**
-   - Select branch: `main` and folder: `/src`
+   - Select branch: `main` and folder: `/docs`
    - Click **Save**
 
 3. **Your site will be available at:**
@@ -33,8 +33,8 @@ This site is configured for GitHub Pages deployment.
 
 If you've purchased a custom domain (e.g., `vajraedge.com`):
 
-1. **The CNAME file is already in src/:**
-   - Located at `src/CNAME`
+1. **The CNAME file is already in docs/:**
+   - Located at `docs/CNAME`
    - Update it with your domain name (remove comments, just add the domain)
 
 2. **Configure DNS settings with your domain registrar:**
@@ -68,16 +68,16 @@ If you've purchased a custom domain (e.g., `vajraedge.com`):
 
 To preview the site locally:
 
-1. **Simple HTTP server (from src directory):**
+1. **Simple HTTP server (from docs directory):**
    ```bash
-   cd src
+   cd docs
    python3 -m http.server 8000
    ```
    Then visit: `http://localhost:8000`
 
-2. **Using Node.js (from src directory):**
+2. **Using Node.js (from docs directory):**
    ```bash
-   cd src
+   cd docs
    npx serve
    ```
 
@@ -85,18 +85,21 @@ To preview the site locally:
 
 ```
 vajraedge-site/
-├── src/                        # Published content (GitHub Pages serves from here)
+├── docs/                       # Published content (GitHub Pages serves from here)
 │   ├── index.html              # Main landing page
 │   ├── css/
 │   │   └── styles.css          # Stylesheet
+│   ├── js/
+│   │   └── main.js             # JavaScript for interactivity
 │   ├── assets/
 │   │   └── images/             # Image assets (logos, icons, etc.)
-│   └── CNAME                   # Custom domain configuration
+│   ├── CNAME                   # Custom domain configuration
+│   └── site.webmanifest        # PWA manifest
 ├── .gitignore                  # Git ignore file
 └── README.md                   # This file (not published)
 ```
 
-**Note:** Only content in the `src/` folder will be published to GitHub Pages. This keeps your repository clean and separates documentation from the actual website.
+**Note:** Only content in the `docs/` folder will be published to GitHub Pages. This keeps your repository clean and separates documentation from the actual website.
 
 ### Next Steps
 

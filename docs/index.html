@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VajraEdge - Advanced Load Testing Tool. Coming Soon.">
-    <meta name="keywords" content="load testing, performance testing, vajraedge, testing tool">
+    <meta name="description" content="VajraEdge - Modern, production-ready performance testing framework built with Java 21 Virtual Threads. Test at scale with real-time metrics and beautiful dashboards.">
+    <meta name="keywords" content="load testing, performance testing, vajraedge, java 21, virtual threads, spring boot, testing tool, distributed testing">
     <meta name="author" content="VajraEdge">
-    <title>VajraEdge - Coming Soon</title>
+    <title>VajraEdge - High-Performance Load Testing Framework</title>
     
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -18,41 +18,410 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="logo">
-                <img src="assets/images/logo.svg" alt="VajraEdge Logo" width="200" height="200">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/images/logo.svg" alt="VajraEdge" class="nav-logo">
+                <span class="nav-name">VajraEdge</span>
             </div>
-            
-            <h1 class="title">VajraEdge</h1>
-            <p class="tagline">Advanced Load Testing Tool</p>
-            
-            <div class="status">
-                <div class="spinner"></div>
-                <p>Under Construction</p>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="https://github.com/happysantoo/vajraedge" target="_blank" class="nav-github">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open Source • Production Ready
             </div>
-            
-            <p class="description">
-                We're building something powerful to help you test and optimize your applications at scale.
-                <br>Stay tuned for launch updates.
+            <h1 class="hero-title">
+                High-Performance<br>
+                <span class="gradient-text">Load Testing</span><br>
+                Framework
+            </h1>
+            <p class="hero-subtitle">
+                Modern performance testing built with Java 21 Virtual Threads, Spring Boot 3.5.7,<br> 
+                and real-time metrics. Test at scale with beautiful dashboards.
             </p>
-            
-            <div class="links">
-                <a href="https://github.com/happysantoo/vajraedge" target="_blank" class="btn">
+            <div class="hero-cta">
+                <a href="#quickstart" class="btn btn-primary btn-lg">
+                    Get Started
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/happysantoo/vajraedge" target="_blank" class="btn btn-secondary btn-lg">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                     View on GitHub
                 </a>
             </div>
-            
-            <div class="footer">
-                <p>&copy; 2025 VajraEdge. All rights reserved.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">50K+</div>
+                    <div class="stat-label">Max Concurrency</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100K</div>
+                    <div class="stat-label">TPS Capacity</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">500ms</div>
+                    <div class="stat-label">Real-Time Updates</div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-title">test-config.json</span>
+                </div>
+                <pre class="code-content"><code>{
+  "targetTps": 5000,
+  "maxConcurrency": 1000,
+  "testDurationSeconds": 120,
+  "rampUpDurationSeconds": 20,
+  "taskType": "HTTP_GET",
+  "taskParameter": "https://api.example.com"
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need for modern performance testing</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Virtual Threads</h3>
+                <p class="feature-description">Leverage Java 21's Project Loom for efficient concurrency. Run 50,000+ concurrent tasks without platform thread overhead.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Real-Time Dashboard</h3>
+                <p class="feature-description">Beautiful web interface with live charts updating every 500ms. WebSocket-powered, no polling required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Smart Scaling</h3>
+                <p class="feature-description">Configurable ramp-up phases, sustaining periods, and target TPS. Gradual load increase prevents system shock.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <h3 class="feature-title">Pluggable Architecture</h3>
+                <p class="feature-description">Lightweight 9KB SDK with zero dependencies. Build custom task plugins for HTTP, gRPC, databases, or anything.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3 class="feature-title">Pre-Flight Validation</h3>
+                <p class="feature-description">Automatic system health checks before test execution. Validates configuration, resources, and network connectivity.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-title">Detailed Metrics</h3>
+                <p class="feature-description">Track P50, P95, P99, P99.9 latency percentiles. See real TPS, success rates, and active task counts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <h3 class="feature-title">Test Suites</h3>
+                <p class="feature-description">Complex multi-scenario testing with sequential/parallel execution, task mixes, and data correlation between scenarios.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Production Ready</h3>
+                <p class="feature-description">Built with Spring Boot 3.5.7, comprehensive validation, error handling, and enterprise-grade architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="section-header">
+            <h2 class="section-title">Modular Architecture</h2>
+            <p class="section-subtitle">Designed for extensibility and distributed testing</p>
+        </div>
+        <div class="architecture-diagram">
+            <div class="arch-module">
+                <div class="module-header">vajraedge-sdk</div>
+                <div class="module-details">
+                    <div class="module-size">9KB JAR</div>
+                    <div class="module-desc">Zero dependencies</div>
+                </div>
+                <ul class="module-list">
+                    <li>Task interfaces</li>
+                    <li>@VajraTask annotations</li>
+                    <li>TaskResult models</li>
+                </ul>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-module">
+                <div class="module-header">vajraedge-core</div>
+                <div class="module-details">
+                    <div class="module-size">46MB JAR</div>
+                    <div class="module-desc">Spring Boot App</div>
+                </div>
+                <ul class="module-list">
+                    <li>REST API</li>
+                    <li>WebSocket metrics</li>
+                    <li>Web dashboard</li>
+                </ul>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-module">
+                <div class="module-header">vajraedge-worker</div>
+                <div class="module-details">
+                    <div class="module-size">16KB JAR</div>
+                    <div class="module-desc">Distributed executor</div>
+                </div>
+                <ul class="module-list">
+                    <li>Task executor</li>
+                    <li>gRPC client</li>
+                    <li>Metrics reporter</li>
+                </ul>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-module">
+                <div class="module-header">vajraedge-plugins</div>
+                <div class="module-details">
+                    <div class="module-size">17KB JAR</div>
+                    <div class="module-desc">Example tasks</div>
+                </div>
+                <ul class="module-list">
+                    <li>HTTP GET/POST</li>
+                    <li>gRPC calls</li>
+                    <li>Database ops</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="section-header">
+            <h2 class="section-title">Get Started in Minutes</h2>
+            <p class="section-subtitle">Three simple steps to your first load test</p>
+        </div>
+        <div class="quickstart-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Clone & Build</h3>
+                <div class="code-block">
+                    <pre><code>git clone https://github.com/happysantoo/vajraedge.git
+cd vajraedge
+./gradlew build</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Start the Controller</h3>
+                <div class="code-block">
+                    <pre><code>./gradlew :vajraedge-core:bootRun
+
+# Dashboard runs on http://localhost:8080</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Configure & Test</h3>
+                <p class="step-description">Open the dashboard, configure your test parameters, and click "Start Test". Watch real-time metrics as your test runs!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDK Section -->
+    <section class="sdk-section">
+        <div class="section-header">
+            <h2 class="section-title">Add VajraEdge SDK</h2>
+            <p class="section-subtitle">Build custom task plugins with zero dependencies</p>
+        </div>
+        <div class="sdk-tabs">
+            <button class="tab-btn active" data-tab="gradle">Gradle</button>
+            <button class="tab-btn" data-tab="maven">Maven</button>
+        </div>
+        <div class="sdk-content">
+            <div class="tab-panel active" data-panel="gradle">
+                <div class="code-block">
+                    <pre><code>repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.happysantoo:vajraedge:vajraedge-sdk:v0.9.3'
+}</code></pre>
+                </div>
+            </div>
+            <div class="tab-panel" data-panel="maven">
+                <div class="code-block">
+                    <pre><code>&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;jitpack.io&lt;/id&gt;
+        &lt;url&gt;https://jitpack.io&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.github.happysantoo&lt;/groupId&gt;
+        &lt;artifactId&gt;vajraedge&lt;/artifactId&gt;
+        &lt;version&gt;v0.9.3&lt;/version&gt;
+        &lt;classifier&gt;vajraedge-sdk&lt;/classifier&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="sdk-example">
+            <h3>Create a Custom Task</h3>
+            <div class="code-block">
+                <pre><code>@VajraTask(name = "MY_TASK", category = "CUSTOM")
+public class MyCustomTask implements TaskPlugin {
+    @Override
+    public TaskResult execute() throws Exception {
+        long start = System.nanoTime();
+        // Your task logic here
+        long latency = System.nanoTime() - start;
+        return new SimpleTaskResult(true, latency, null);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs-section">
+        <div class="section-header">
+            <h2 class="section-title">Documentation</h2>
+            <p class="section-subtitle">Comprehensive guides and references</p>
+        </div>
+        <div class="docs-grid">
+            <a href="https://github.com/happysantoo/vajraedge#-rest-api" target="_blank" class="doc-card">
+                <div class="doc-icon">📚</div>
+                <h3>REST API</h3>
+                <p>Complete API reference for test management, validation, and metrics</p>
+            </a>
+            <a href="https://github.com/happysantoo/vajraedge#-test-suites" target="_blank" class="doc-card">
+                <div class="doc-icon">🎭</div>
+                <h3>Test Suites</h3>
+                <p>Multi-scenario testing with task mixes and data correlation</p>
+            </a>
+            <a href="https://github.com/happysantoo/vajraedge#-pre-flight-validation" target="_blank" class="doc-card">
+                <div class="doc-icon">🔍</div>
+                <h3>Pre-Flight Validation</h3>
+                <p>Automatic system health and configuration checks</p>
+            </a>
+            <a href="https://github.com/happysantoo/vajraedge#building-custom-workers" target="_blank" class="doc-card">
+                <div class="doc-icon">🔧</div>
+                <h3>Custom Workers</h3>
+                <p>Build and deploy distributed test workers</p>
+            </a>
+            <a href="https://github.com/happysantoo/vajraedge#-metrics-explained" target="_blank" class="doc-card">
+                <div class="doc-icon">📊</div>
+                <h3>Metrics Guide</h3>
+                <p>Understanding TPS, percentiles, and latency statistics</p>
+            </a>
+            <a href="https://github.com/happysantoo/vajraedge/tree/main/documents" target="_blank" class="doc-card">
+                <div class="doc-icon">📖</div>
+                <h3>All Documents</h3>
+                <p>Architecture details, troubleshooting, and migration guides</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Test at Scale?</h2>
+            <p class="cta-subtitle">Join developers using VajraEdge for production-grade performance testing</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/happysantoo/vajraedge" target="_blank" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Get Started on GitHub
+                </a>
+                <a href="https://jitpack.io/#happysantoo/vajraedge" target="_blank" class="btn btn-secondary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    View on JitPack
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.svg" alt="VajraEdge" class="footer-logo">
+                <p class="footer-tagline">High-Performance Load Testing Framework</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#quickstart">Quick Start</a></li>
+                        <li><a href="https://github.com/happysantoo/vajraedge" target="_blank">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/happysantoo/vajraedge/tree/main/documents" target="_blank">Guides</a></li>
+                        <li><a href="https://github.com/happysantoo/vajraedge#-rest-api" target="_blank">API Reference</a></li>
+                        <li><a href="https://github.com/happysantoo/vajraedge/tree/main/vajraedge-plugins" target="_blank">Examples</a></li>
+                        <li><a href="https://jitpack.io/#happysantoo/vajraedge" target="_blank">JitPack</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/happysantoo/vajraedge" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/happysantoo/vajraedge/issues" target="_blank">Issues</a></li>
+                        <li><a href="https://github.com/happysantoo/vajraedge/blob/main/LICENSE" target="_blank">License</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VajraEdge. Licensed under Apache 2.0</p>
+            <p class="footer-tech">Built with ❤️ using Java 21 • Spring Boot 3.5.7 • Virtual Threads</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
