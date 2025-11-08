@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder logo - Replace with actual VajraEdge logo -->
+  <rect width="200" height="200" fill="#1a1a24"/>
+  <path d="M100 25L150 56.25V118.75L100 150L50 118.75V56.25L100 25Z" stroke="url(#gradient)" stroke-width="4" fill="none"/>
+  <path d="M100 62.5L125 77.5V107.5L100 122.5L75 107.5V77.5L100 62.5Z" fill="url(#gradient)" opacity="0.3"/>
+  <circle cx="100" cy="100" r="15" fill="url(#gradient)"/>
+  <text x="100" y="175" font-family="Arial, sans-serif" font-size="16" fill="#00d4ff" text-anchor="middle" font-weight="bold">VajraEdge</text>
+  <defs>
+    <linearGradient id="gradient" x1="50" y1="25" x2="150" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7b2ff7"/>
+    </linearGradient>
+  </defs>
+</svg>
